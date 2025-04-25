@@ -1,0 +1,3 @@
+Question: How has the DALYs changed in China over time?
+line number: 68-77
+the result is show in a picture, and the overall tendency is decrease
