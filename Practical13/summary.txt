@@ -1,0 +1,19 @@
+length of amino acids:222
+subcellular location: Mitochondrial Martix
+hits:250
+percentage identities: 58.1~100%
+
+HUMAN vs MOUSE
+Aligment score: 1097.0
+Identity percentage: 90.09%
+
+
+HUMAN vs Random
+Aligment score: -222.0
+Identity percentage: 5.41%
+
+Mouse vs Random
+Aligment score: -209.0
+Identity percentage: 5.86%
+
+Human and Mouse SOD2 sequence are most closely related
