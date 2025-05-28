@@ -2,7 +2,7 @@ import xml.dom.minidom
 import xml.sax
 from datetime import datetime
 
-# DOM 方法处理
+# DOM 
 def process_dom(file_path):
     start_time = datetime.now()
     dom_doc = xml.dom.minidom.parse(file_path)
@@ -32,7 +32,7 @@ def process_dom(file_path):
     dom_time = datetime.now() - start_time
     return max_counts, dom_time
 
-# SAX 方法处理
+# SAX 
 class GOHandler(xml.sax.ContentHandler):
     def __init__(self):
         self.max_counts = {
@@ -88,25 +88,25 @@ def process_sax(file_path):
     sax_time = datetime.now() - start_time
     return handler.max_counts, sax_time
 
-# 主程序
+# global
 def main():
     file_path = '/Users/pro/Desktop/IBI1_2024-25/Practical14/go_obo.xml'
     
-    # DOM 处理
+    # DOM 
     dom_results, dom_time = process_dom(file_path)
     print("DOM Results:")
     for ns in dom_results:
         print(f"{ns}: {dom_results[ns]['id']} (count: {dom_results[ns]['count']})")
     print(f"DOM Time: {dom_time}\n")
     
-    # SAX 处理
+    # SAX 
     sax_results, sax_time = process_sax(file_path)
     print("SAX Results:")
     for ns in sax_results:
         print(f"{ns}: {sax_results[ns]['id']} (count: {sax_results[ns]['count']})")
     print(f"SAX Time: {sax_time}\n")
     
-    # 比较时间
+    # compare time
     if dom_time < sax_time:
         print("# DOM was faster")
     else:

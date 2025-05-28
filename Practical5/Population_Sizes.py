@@ -11,10 +11,11 @@ sorted_China = sorted(China_provinces, reverse=True)
 #print the sorted population
 print(sorted_uk)
 print(sorted_China)
-#create plots 
+#create UK plots 
 plt.pie(uk_countries,labels = countries,autopct= '%1.2f%%')
 plt.title('UK Population Sizes')
 plt.show()
+#create China plots 
 plt.pie(China_provinces,labels = provinces,autopct= '%1.2f%%')
 plt.title('China Population Sizes')
 plt.show()
